@@ -1,4 +1,4 @@
-Warning: This code has not yet been tested!
+Warning: This code has not yet been tested enough!
 
 How to use: 
 Configure by changing input.conf
