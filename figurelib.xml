@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<XML>
+  <letter name="B" width="0.3">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Circle>
+      <center>{'x': 0.0, 'y': 0.25}</center>
+      <radius>0.25</radius>
+      <section>{'alpha1': 0.0, 'alpha2': -180.0}</section>
+    </Circle>
+    <Circle>
+      <center>{'x': 0.0, 'y': 0.75}</center>
+      <radius>0.25</radius>
+      <section>{'alpha1': 0.0, 'alpha2': -180.0}</section>
+    </Circle>
+  </letter>
+  <letter name="A" width="1">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.5, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.5, 'y': 1.0}</start>
+      <end>{'x': 1.0, 'y': 0.0}</end>
+      <backtrack>0.5</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.75, 'y': 0.5}</start>
+      <end>{'x': 0.25, 'y': 0.5}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="C" width="0.8">
+    <Circle>
+      <center>{'x': 0.5, 'y': 0.5}</center>
+      <radius>0.5</radius>
+      <section>{'alpha1': -30.0, 'alpha2': 210.0}</section>
+    </Circle>
+  </letter>
+  <letter name="D" width="0.5">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Circle>
+      <center>{'x': 0, 'y': 0.5}</center>
+      <radius>0.5</radius>
+      <section>{'alpha1': 0.0, 'alpha2': -180.0}</section>
+    </Circle>
+  </letter>
+  <letter name="E" width="0.5">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.0, 'y': 1.0}</start>
+      <end>{'x': 0.5, 'y': 1.0}</end>
+      <backtrack>0.0</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.0, 'y': 0.5}</start>
+      <end>{'x': 0.5, 'y': 0.5}</end>
+      <backtrack>0.0</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.5, 'y': 0.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="F" width="0.5">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.0, 'y': 1.0}</start>
+      <end>{'x': 0.5, 'y': 1.0}</end>
+      <backtrack>0.0</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.0, 'y': 0.5}</start>
+      <end>{'x': 0.5, 'y': 0.5}</end>
+      <backtrack>0.0</backtrack>
+    </Line>
+  </letter>
+  <letter name="G" width="1.0">
+    <Circle>
+      <center>{'x': 0.5, 'y': 0.5}</center>
+      <radius>0.5</radius>
+      <section>{'alpha1': -30.0, 'alpha2': 270.0}</section>
+    </Circle>
+    <Line>
+      <start>{'x': 1.0, 'y': 0.5}</start>
+      <end>{'x': 0.5, 'y': 0.5}</end>
+      <backtrack>0.0</backtrack>
+    </Line>
+  </letter>
+  <letter name="R" width="0.5">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Circle>
+      <center>{'x': 0.25, 'y': 0.75}</center>
+      <radius>0.25</radius>
+      <section>{'alpha1': 0.0, 'alpha2': -180.0}</section>
+    </Circle>
+    <Line>
+      <start>{'x': 0.0, 'y': 0.5}</start>
+      <end>{'x': 0.5, 'y': 0.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="L" width="0.5">
+    <Line>
+      <start>{'x': 0.0, 'y': 1.0}</start>
+      <end>{'x': 0.0, 'y': 0.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.5, 'y': 0.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="I" width="0.2">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="T" width="1.0">
+    <Line>
+      <start>{'x': 0.5, 'y': 0.0}</start>
+      <end>{'x': 0.5, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0, 'y': 1}</start>
+      <end>{'x': 1.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="Y" width="1.0">
+    <Line>
+      <start>{'x': 0.0, 'y': 1.0}</start>
+      <end>{'x': 0.5, 'y': 0.5}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.5, 'y': 0.5}</start>
+      <end>{'x': 0.5, 'y': 0.0}</end>
+      <backtrack>0.0</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.5, 'y': 0.5}</start>
+      <end>{'x': 1.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="Q" width="1.0">
+    <Circle>
+      <center>{'x': 0.5, 'y': 0.5}</center>
+      <radius>0.5</radius>
+      <section>{'alpha1': -135, 'alpha2': 225}</section>
+    </Circle>
+    <Line>
+      <start>{'x': 1.0, 'y': 0.0}</start>
+      <end>{'x': 0.7, 'y': 0.3}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="W" width="1.0">
+    <Line>
+      <start>{'x': 0.0, 'y': 1.0}</start>
+      <end>{'x': 0.25, 'y': 0.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.25, 'y': 0.0}</start>
+      <end>{'x': 0.5, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.5, 'y': 1.0}</start>
+      <end>{'x': 0.75, 'y': 0.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.75, 'y': 0.0}</start>
+      <end>{'x': 1.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="U" width="0.5">
+    <Line>
+      <start>{'x': 0.0, 'y': 1.0}</start>
+      <end>{'x': 0.0, 'y': 0.25}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Circle>
+      <center>{'x': 0.25, 'y': 0.25}</center>
+      <radius>0.25</radius>
+      <section>{'alpha1': 90.0, 'alpha2': 270.0}</section>
+    </Circle>
+    <Line>
+      <start>{'x': 0.5, 'y': 0.25}</start>
+      <end>{'x': 0.5, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="O" width="1.0">
+    <Circle>
+      <center>{'x': 0.5, 'y': 0.5}</center>
+      <radius>0.5</radius>
+      <section>{'alpha1': 0, 'alpha2': 360}</section>
+    </Circle>
+  </letter>
+  <letter name="P" width="0.5">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Circle>
+      <center>{'x': 0.0, 'y': 0.75}</center>
+      <radius>0.25</radius>
+      <section>{'alpha1': 0.0, 'alpha2': -180.0}</section>
+    </Circle>
+  </letter>
+  <letter name="S" width="0.5">
+    <Circle>
+      <center>{'x': 0.232, 'y': 0.768}</center>
+      <radius>0.232</radius>
+      <section>{'alpha1': -45.0, 'alpha2': 150.0}</section>
+    </Circle>
+    <Circle>
+      <center>{'x': 0.232, 'y': 0.232}</center>
+      <radius>0.232</radius>
+      <section>{'alpha1': -30.0, 'alpha2': -225.0}</section>
+    </Circle>
+  </letter>
+  <letter name="H" width="0.5">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.0, 'y': 1.0}</end>
+      <backtrack>0.5</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.0, 'y': 0.5}</start>
+      <end>{'x': 0.5, 'y': 0.5}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.5, 'y': 0.0}</start>
+      <end>{'x': 0.5, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="J" width="0.5">
+    <Line>
+      <start>{'x': 0.0, 'y': 1.0}</start>
+      <end>{'x': 0.5, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.5, 'y': 1.0}</start>
+      <end>{'x': 0.5, 'y': 0.25}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Circle>
+      <center>{'x': 0.25, 'y': 0.25}</center>
+      <radius>0.25</radius>
+      <section>{'alpha1': 270.0, 'alpha2': 90.0}</section>
+    </Circle>
+  </letter>
+  <letter name="K" width="0.5">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.0, 'y': 1.0}</end>
+      <backtrack>0.5</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.0, 'y': 0.5}</start>
+      <end>{'x': 0.5, 'y': 1.0}</end>
+      <backtrack>0.0</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.0, 'y': 0.5}</start>
+      <end>{'x': 0.5, 'y': 0.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="X" width="1.0">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 1.0, 'y': 1.0}</end>
+      <backtrack>0.5</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.0, 'y': 1.0}</start>
+      <end>{'x': 1.0, 'y': 0.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="N" width="0.75">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.75, 'y': 0.0}</start>
+      <end>{'x': 0.75, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="M" width="1.0">
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.0, 'y': 1.0}</start>
+      <end>{'x': 0.5, 'y': 0.5}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.5, 'y': 0.5}</start>
+      <end>{'x': 1.0, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 1.0, 'y': 0.0}</start>
+      <end>{'x': 1.0, 'y': 0.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="Z" width="0.5">
+    <Line>
+      <start>{'x': 0.5, 'y': 1.0}</start>
+      <end>{'x': 0.0, 'y': 1.0}</end>
+      <backtrack>0</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.0, 'y': 0.0}</start>
+      <end>{'x': 0.5, 'y': 0.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name="V" width="0.5">
+    <Line>
+      <start>{'x': 0.0, 'y': 1.0}</start>
+      <end>{'x': 0.25, 'y': 0.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+    <Line>
+      <start>{'x': 0.25, 'y': 0.0}</start>
+      <end>{'x': 0.5, 'y': 1.0}</end>
+      <backtrack>1</backtrack>
+    </Line>
+  </letter>
+  <letter name=" " width="0.5"/>
+</XML>
