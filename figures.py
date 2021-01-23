@@ -4,13 +4,19 @@ import lxml.etree as et
 from localconfig import config
 from ast import literal_eval
 import argparse
+import os
 
 def getFilenameArguments():
 	parser=argparse.ArgumentParser()
-	parser.add_argument("--letters",help="specify path to letter library",nargs="?",default="figurelib.xml")
-	parser.add_argument("--settings",help="specify path to settings file",nargs="?",default="input.conf")
+	parser.add_argument("-l","--letters",help="specify path to letter library",default="figurelib.xml")
+	parser.add_argument("-s","--settings",help="specify path to settings file",default="input.conf")
+	parser.add_argument("-w","--writingsDir",help="specify folder for kml-Files",default="writings")
 	args=parser.parse_args()
 	return args
+
+def checkFile(fileName):
+	if not os.path.exists(fileName):
+		raise FileNotFoundError(fileName+" does not exist!")
 
 class Geo:
 	def getPoints(self):
@@ -64,6 +70,11 @@ class Circle:
 
 class KML:
 	def __init__(self):
+		#first we check if we can do anything at all:
+		args=getFilenameArguments()
+		checkFile(args.settings)
+		checkFile(args.letters)
+		#ok we're good. check out settings now:
 		settings=getSettings()
 		writing=settings["writing"]
 		self.makeKmlHeader()
@@ -101,7 +112,7 @@ class KML:
 
 	def makeFile(self, writing):
 		tree=et.ElementTree(self.kml)
-		filename="writings/"+writing+".kml"
+		filename=getFilenameArguments().writingsDir+"/"+writing+".kml"
 		tree.write(filename,xml_declaration=True,encoding="utf-8",pretty_print=True)
 
 class XmlLetter:
@@ -191,4 +202,6 @@ def getSettings():
 
 KML()
 #TODO: Test special char input and weird long-lat input. negative size etc
-#TODO: Wrong paths for config or figurelib file causes weird behaviour --> Fix!!!
+#TODO: Wrong paths causes weird behaviour --> Fix!!! *3
+#TODO: Use OS to make it run on linux, too
+#TODO: Add requirements file
