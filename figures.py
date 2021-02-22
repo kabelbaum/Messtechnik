@@ -3,16 +3,8 @@ import numpy as np
 import lxml.etree as et
 from localconfig import config
 from ast import literal_eval
-import argparse
 import os
 
-def getFilenameArguments():
-	parser=argparse.ArgumentParser()
-	parser.add_argument("-l","--letters",help="specify path to letter library",default="figurelib.xml")
-	parser.add_argument("-s","--settings",help="specify path to settings file",default="input.conf")
-	parser.add_argument("-w","--writingsDir",help="specify folder for kml-Files",default="writings")
-	args=parser.parse_args()
-	return args
 
 def checkFile(fileName):
 	if not os.path.exists(fileName):
@@ -69,19 +61,19 @@ class Circle:
 		return r
 
 class KML:
-	def __init__(self):
+	def __init__(self,settings):
 		#first we check if we can do anything at all:
-		args=getFilenameArguments()
-		checkFile(args.settings)
-		checkFile(args.letters)
-		#ok we're good. check out settings now:
-		settings=getSettings()
-		writing=settings["writing"]
+		self.settings=settings
+		checkFile(self.settings["letterLib"])
+		#no exception? ok, we're good. run generateAllLetters whenever you want
+	
+	def generateAllLetters(self):
+		writing=self.settings["writing"]
 		self.makeKmlHeader()
 		dx=0
 		letterSpacing=.2 #TODO: customizable
 		for charLetter in writing.upper():
-			letter=Letter(charLetter)
+			letter=Letter(charLetter,self.settings)
 			points=letter.generate((dx,0))
 			dx+=float(letter.letterSubtree.get("width"))+letterSpacing
 			self.drawLetter(charLetter,points)
@@ -112,8 +104,11 @@ class KML:
 
 	def makeFile(self, writing):
 		tree=et.ElementTree(self.kml)
-		filename=getFilenameArguments().writingsDir+"/"+writing+".kml"
-		tree.write(filename,xml_declaration=True,encoding="utf-8",pretty_print=True)
+		folderName=self.settings["writingsDir"]+"/"
+		filename=writing+".kml"
+		filepath=folderName+filename
+		None if os.path.exists(folderName) else os.mkdir(folderName)
+		tree.write(filepath,xml_declaration=True,encoding="utf-8",pretty_print=True)
 
 class XmlLetter:
 	"""
@@ -126,7 +121,7 @@ class XmlLetter:
 		self.elements=self.makeElements()
 	
 	def getXMLRoot(self):
-		self.letterLibFilePath=getFilenameArguments().letters
+		self.letterLibFilePath=self.settings["letterLib"]
 		letterLibTree=et.parse(self.letterLibFilePath,et.XMLParser())
 		return letterLibTree.getroot()
 	
@@ -157,7 +152,8 @@ class XmlLetter:
 
 
 class Letter(XmlLetter):	
-	def __init__(self, charLetter):
+	def __init__(self, charLetter,settings):
+		self.settings=settings
 		super().__init__(charLetter)
 		# self.filename=filename
 		# self.charLetter=charLetter
@@ -179,12 +175,11 @@ class Letter(XmlLetter):
 		for x,y in self.getAllPoints():
 			yield np.array([x+dx,y+dy])@rotMat
 	def generate(self,shift):
-		inputs=getSettings()
 		kmToDegree=90/10000
-		startLat=inputs["latitude"]
-		startLong=inputs["longitude"]
-		angle=inputs["angle"]
-		size=inputs["size"]
+		startLat=self.settings["latitude"]
+		startLong=self.settings["longitude"]
+		angle=self.settings["angle"]
+		size=self.settings["size"]
 		
 		ret=""
 		for x,y in self.getRotatedPoints(angle,shift):
@@ -193,15 +188,11 @@ class Letter(XmlLetter):
 			ret+=str(lon)+","+str(lat)+",0 "
 		return ret
 
-def getSettings():
-	settingsPath=getFilenameArguments().settings
-	config.read(settingsPath)
-	return dict(config.items("Settings"))
+if __name__=="__main__":
+	dummy={'angle': 0.0, 'latitude': -4.5, 'letterLib': 'figurelib.xml', 'longitude': 0.0, 'size': 1000.0, 'writing': 'Hello World', 'writingsDir': 'writings'}
+	k=KML(dummy)
+	k.generateAllLetters()
 
-
-
-KML()
 #TODO: Test special char input and weird long-lat input. negative size etc
-#TODO: Wrong paths causes weird behaviour --> Fix!!! *3
 #TODO: Use OS to make it run on linux, too
 #TODO: Add requirements file
